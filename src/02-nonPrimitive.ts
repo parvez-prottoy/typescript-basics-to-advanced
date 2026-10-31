@@ -34,3 +34,24 @@ console.log(userLocation);
 
 let status: [string, string, string] = ["active", "inactive", "pending"];
 console.log(status);
+
+// ? TS - object
+let person: {
+  firstName: string;
+  middleName?: string; // optional property
+  lastName: string;
+  age: number;
+  isMarried: boolean;
+  organization: "6pmIT" | "Google" | "Microsoft"; // union type literal type
+  readonly profession: string; // access modifier readonly
+} = {
+  firstName: "John",
+  lastName: "Smith",
+  age: 30,
+  isMarried: true,
+  //   organization: "Programming Hero",
+  organization: "6pmIT",
+  profession: "Software Engineer",
+};
+// person.profession = "Senior Software Engineer"; // This will cause an error since profession is readonly
+console.log(person);
